@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://resonancelens.de/sitemap.xml
