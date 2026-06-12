@@ -188,6 +188,111 @@
     </div>
   </section>
 
+  <!-- NETWORK VIEWS -->
+  <section>
+    <div class="wrap">
+      <div class="sec-label"><span data-lang="en">// Reading the network</span><span data-lang="de">// Das Netzwerk lesen</span></div>
+      <h2><span data-lang="en">Why there are several views</span><span data-lang="de">Warum es mehrere Ansichten gibt</span></h2>
+      <p class="lede">
+        <span data-lang="en">The same network can be looked at in different ways, because different questions need different views. One arrangement reveals concentration; another reveals how a shock cascades between layers; another reveals the overall coupling structure. The view is a lens, not decoration — each one answers a question the others answer less well. The 3D views can be rotated and zoomed to inspect structure from any angle.</span>
+        <span data-lang="de">Dasselbe Netzwerk lässt sich unterschiedlich betrachten, weil verschiedene Fragen verschiedene Ansichten brauchen. Eine Anordnung zeigt Konzentration; eine andere, wie ein Schock zwischen Ebenen kaskadiert; eine weitere die Gesamtstruktur der Kopplung. Die Ansicht ist eine Linse, kein Dekor — jede beantwortet eine Frage, die die anderen weniger gut beantworten. Die 3D-Ansichten lassen sich drehen und zoomen, um die Struktur aus jedem Winkel zu prüfen.</span>
+      </p>
+
+      <!-- 2D Flat -->
+      <div class="view-block">
+        <div class="vtext">
+          <div class="vtag">2D Flat</div>
+          <h3><span data-lang="en">Full per-node detail</span><span data-lang="de">Vollständiges Knoten-Detail</span></h3>
+          <p class="q"><span data-lang="en">Question: which individual node or edge is under stress right now?</span><span data-lang="de">Frage: welcher einzelne Knoten oder welche Kante steht gerade unter Stress?</span></p>
+          <p><span data-lang="en">Colour encodes stress, the symbol shape encodes which resonance space a node belongs to. The flat layout keeps every element legible at once — the best view for reading detail.</span><span data-lang="de">Die Farbe kodiert Stress, die Symbolform kodiert, zu welchem Resonanzraum ein Knoten gehört. Das flache Layout hält jedes Element gleichzeitig lesbar — die beste Ansicht für Details.</span></p>
+        </div>
+        <div class="shotimg"><img src="../assets/view-2dflat.png" alt="2D Flat view — coupled nodes, colour = stress, shape = space" /></div>
+      </div>
+
+      <!-- 3D Layered -->
+      <div class="view-block">
+        <div class="vtext">
+          <div class="vtag">3D Layered</div>
+          <h3><span data-lang="en">Stress cascading between spaces</span><span data-lang="de">Stress-Kaskade zwischen Räumen</span></h3>
+          <p class="q"><span data-lang="en">Question: how does a shock travel from one layer to the next?</span><span data-lang="de">Frage: wie wandert ein Schock von einer Ebene zur nächsten?</span></p>
+          <p><span data-lang="en">Each resonance space becomes its own stacked layer; stress cascades top to bottom. Cross-space bridges are drawn near-vertical, so the connections that carry risk between domains stand out — exactly where compound risk lives.</span><span data-lang="de">Jeder Resonanzraum wird zu einer eigenen gestapelten Ebene; Stress kaskadiert von oben nach unten. Cross-Space-Brücken werden nahezu senkrecht gezeichnet, sodass die risikotragenden Verbindungen zwischen Domänen hervortreten — genau dort, wo Compound Risk entsteht.</span></p>
+        </div>
+        <div class="shotimg"><img src="../assets/view-3dlayered.png" alt="3D Layered view — Digital, Financial, Economic spaces stacked, vertical cross-space bridges" /></div>
+      </div>
+
+      <!-- 3D Clustering -->
+      <div class="view-block">
+        <div class="vtext">
+          <div class="vtag">3D Clustering</div>
+          <h3><span data-lang="en">Concentration and cluster membership</span><span data-lang="de">Konzentration und Cluster-Zugehörigkeit</span></h3>
+          <p class="q"><span data-lang="en">Question: where do dependencies concentrate?</span><span data-lang="de">Frage: wo konzentrieren sich Abhängigkeiten?</span></p>
+          <p><span data-lang="en">Translucent hulls group nodes by cluster. Dense, tightly bound hulls reveal where the system concentrates — the single points of systemic failure that a flat list of providers would hide.</span><span data-lang="de">Durchscheinende Hüllen gruppieren Knoten nach Cluster. Dichte, eng gebundene Hüllen zeigen, wo das System konzentriert — die Single Points of Systemic Failure, die eine bloße Anbieterliste verbergen würde.</span></p>
+        </div>
+        <div class="shot"><span class="ico">◓</span><span class="cap" data-lang="en">SCREENSHOT<br>3D Clustering — translucent cluster hulls</span><span class="cap" data-lang="de">SCREENSHOT<br>3D Clustering — durchscheinende Cluster-Hüllen</span></div>
+      </div>
+
+      <!-- 3D Topology -->
+      <div class="view-block">
+        <div class="vtext">
+          <div class="vtag">3D Topology</div>
+          <h3><span data-lang="en">Overall coupling structure</span><span data-lang="de">Gesamtstruktur der Kopplung</span></h3>
+          <p class="q"><span data-lang="en">Question: what does the system's coupling look like as a whole?</span><span data-lang="de">Frage: wie sieht die Kopplung des Systems als Ganzes aus?</span></p>
+          <p><span data-lang="en">A free 3D force layout positions nodes by their connections, not by predefined layers. Central, densely linked nodes pull together; loosely coupled ones drift to the edge — the shape of the system emerges from its structure.</span><span data-lang="de">Ein freies 3D-Force-Layout positioniert Knoten nach ihren Verbindungen, nicht nach vordefinierten Ebenen. Zentrale, dicht verbundene Knoten ziehen sich zusammen; lose gekoppelte wandern an den Rand — die Form des Systems entsteht aus seiner Struktur.</span></p>
+        </div>
+        <div class="shot"><span class="ico">◈</span><span class="cap" data-lang="en">SCREENSHOT<br>3D Topology — free force layout</span><span class="cap" data-lang="de">SCREENSHOT<br>3D Topology — freies Force-Layout</span></div>
+      </div>
+
+      <!-- additional views (compact) -->
+      <h2 style="margin-top:48px"><span data-lang="en">Three more analytical views</span><span data-lang="de">Drei weitere analytische Ansichten</span></h2>
+      <div class="grid2">
+        <div class="panel">
+          <div class="tag">Heatmap</div>
+          <h3><span data-lang="en">Stress over time</span><span data-lang="de">Stress über die Zeit</span></h3>
+          <p><span data-lang="en">Nodes or clusters as rows, time steps as columns. Makes the moment a shock propagates visible as a horizontal band — and shows which parts stay calm.</span><span data-lang="de">Knoten oder Cluster als Zeilen, Zeitschritte als Spalten. Macht den Moment der Schock-Ausbreitung als horizontales Band sichtbar — und zeigt, welche Teile ruhig bleiben.</span></p>
+        </div>
+        <div class="panel">
+          <div class="tag">Sankey</div>
+          <h3><span data-lang="en">Coupling throughput</span><span data-lang="de">Kopplungs-Durchsatz</span></h3>
+          <p><span data-lang="en">Flow view of how much coupling runs along the edges between spaces. Band width shows where load actually flows — and where it bottlenecks.</span><span data-lang="de">Fluss-Ansicht, wie viel Kopplung über die Kanten zwischen Räumen läuft. Die Bandbreite zeigt, wo Last tatsächlich fließt — und wo sie sich staut.</span></p>
+        </div>
+        <div class="panel">
+          <div class="tag">Risk Paths</div>
+          <h3><span data-lang="en">Strongest propagation chains</span><span data-lang="de">Stärkste Ausbreitungsketten</span></h3>
+          <p><span data-lang="en">The top structural risk paths — the strongest stress-propagation chains — overlaid on the network. Shows the routes along which a local disturbance would most likely cascade.</span><span data-lang="de">Die wichtigsten strukturellen Risikopfade — die stärksten Stress-Ausbreitungsketten — über das Netzwerk gelegt. Zeigt die Routen, entlang derer eine lokale Störung am ehesten kaskadiert.</span></p>
+        </div>
+      </div>
+
+      <!-- profiles -->
+      <h2 style="margin-top:48px"><span data-lang="en">Profiles: how you look, not who looks</span><span data-lang="de">Profile: wie du schaust, nicht wer schaut</span></h2>
+      <p class="lede">
+        <span data-lang="en">A profile presets the most useful view for a given intent and de-emphasises what does not serve it. The profiles are functional, not role-named — they apply across every scenario, whether energy, pandemic, financial or ICT.</span>
+        <span data-lang="de">Ein Profil stellt die nützlichste Ansicht für eine bestimmte Absicht voreinstellt und tritt zurück, was ihr nicht dient. Die Profile sind funktional, nicht rollenbenannt — sie gelten über jedes Szenario hinweg, ob Energie, Pandemie, Finanzen oder IKT.</span>
+      </p>
+      <div class="profiles">
+        <div class="prof"><b>Overview</b><div class="pv">→ 3D Clustering</div><span data-lang="en">Where does the system concentrate? Coarse, big-picture read.</span><span data-lang="de">Wo konzentriert sich das System? Grobe Gesamtschau.</span></div>
+        <div class="prof"><b>Structure</b><div class="pv">→ 3D Topology</div><span data-lang="en">How is the system coupled? Focus on systemic structure and capacity.</span><span data-lang="de">Wie ist das System gekoppelt? Fokus auf systemische Struktur und Kapazität.</span></div>
+        <div class="prof"><b>Flows</b><div class="pv">→ Sankey</div><span data-lang="en">Where does load actually flow? Throughput between spaces.</span><span data-lang="de">Wohin fließt die Last wirklich? Durchsatz zwischen Räumen.</span></div>
+        <div class="prof"><b>Timeline</b><div class="pv">→ Heatmap</div><span data-lang="en">How does a shock propagate over time? Early warning in focus.</span><span data-lang="de">Wie breitet sich ein Schock über die Zeit aus? Frühwarnung im Fokus.</span></div>
+        <div class="prof"><b>Detail</b><div class="pv">→ 2D Flat</div><span data-lang="en">Full per-node detail, every view available, nothing dimmed.</span><span data-lang="de">Vollständiges Knoten-Detail, jede Ansicht verfügbar, nichts gedimmt.</span></div>
+      </div>
+
+      <!-- critical signals -->
+      <h2 style="margin-top:48px"><span data-lang="en">The critical signals to look for</span><span data-lang="de">Die kritischen Signale</span></h2>
+      <p class="lede"><span data-lang="en">Across every view, a small set of visual cues marks where structure is under strain.</span><span data-lang="de">Über alle Ansichten hinweg markiert ein kleiner Satz visueller Hinweise, wo Struktur unter Belastung steht.</span></p>
+      <div class="signals">
+        <div class="sig"><span class="swatch" style="background:#d9534f"></span><div><b><span data-lang="en">Overloaded / failed edge</span><span data-lang="de">Überlastete / ausgefallene Kante</span></b><span data-lang="en">A connection whose coupling has broken under stress.</span><span data-lang="de">Eine Verbindung, deren Kopplung unter Stress gebrochen ist.</span></div></div>
+        <div class="sig"><span class="swatch" style="background:#9b6fd0"></span><div><b><span data-lang="en">Cross-space bridge</span><span data-lang="de">Cross-Space-Brücke</span></b><span data-lang="en">A connection between two domains — where compound risk crosses over.</span><span data-lang="de">Eine Verbindung zwischen zwei Domänen — wo Compound Risk überspringt.</span></div></div>
+        <div class="sig"><span class="swatch" style="background:#E85AAD"></span><div><b><span data-lang="en">Substitution edge</span><span data-lang="de">Substitutionskante</span></b><span data-lang="en">A reroute that carries load when a primary path degrades.</span><span data-lang="de">Eine Umleitung, die Last trägt, wenn ein Hauptpfad degradiert.</span></div></div>
+        <div class="sig"><span class="swatch" style="background:linear-gradient(90deg,#4cae7d,#e0a93c,#d9534f)"></span><div><b><span data-lang="en">Node stress state</span><span data-lang="de">Knoten-Stresszustand</span></b><span data-lang="en">Colour from calm to critical shows where buffer is thinning.</span><span data-lang="de">Die Farbe von ruhig bis kritisch zeigt, wo der Puffer dünn wird.</span></div></div>
+      </div>
+
+      <div class="note" style="margin-top:30px">
+        <span data-lang="en">These views show <b>emergent behaviour</b> — what the system does. They do not expose how the model computes it. The disturbance range you see is observed, not declared.</span>
+        <span data-lang="de">Diese Ansichten zeigen <b>emergentes Verhalten</b> — was das System tut. Sie legen nicht offen, wie das Modell es berechnet. Der sichtbare Störradius ist beobachtet, nicht deklariert.</span>
+      </div>
+    </div>
+  </section>
+
   <!-- LIMITS -->
   <section>
     <div class="wrap">

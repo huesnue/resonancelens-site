@@ -127,3 +127,33 @@ footer{border-top:1px solid var(--line);padding:40px 0;color:var(--ink-faint);fo
 
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 :focus-visible{outline:2px solid var(--cool);outline-offset:3px;border-radius:4px}
+
+/* ---------- network views section ---------- */
+.view-block{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;margin-top:26px;padding:24px;background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius)}
+.view-block:nth-child(even){direction:rtl}
+.view-block:nth-child(even) > *{direction:ltr}
+@media(max-width:760px){.view-block{grid-template-columns:1fr;gap:16px}.view-block:nth-child(even){direction:ltr}}
+.view-block .vtext .vtag{font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--cool);margin-bottom:8px}
+.view-block .vtext h3{font-family:"Fraunces",serif;font-weight:500;font-size:1.2rem;margin-bottom:12px}
+.view-block .vtext p{font-size:.92rem;margin-bottom:9px}
+.view-block .vtext .q{color:var(--ink);font-weight:500}
+/* screenshot placeholder */
+.shot{aspect-ratio:16/10;border:1px dashed var(--cool-deep);border-radius:10px;background:repeating-linear-gradient(45deg,rgba(63,155,214,.05),rgba(63,155,214,.05) 10px,transparent 10px,transparent 20px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--ink-faint);text-align:center;padding:18px}
+.shot .ico{font-size:1.6rem;opacity:.6}
+.shot .cap{font-family:"IBM Plex Mono",monospace;font-size:.72rem;line-height:1.5}
+/* signal legend chips */
+.signals{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:26px}
+.sig{display:flex;gap:12px;align-items:flex-start;background:var(--bg-soft);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.sig .swatch{flex:none;width:26px;height:14px;margin-top:3px;border-radius:3px}
+.sig b{font-size:.9rem;display:block;margin-bottom:3px}
+.sig span{font-size:.85rem;color:var(--ink-dim)}
+/* profile chips */
+.profiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:26px}
+.prof{background:var(--bg-soft);border:1px solid var(--line);border-top:2px solid var(--cool-deep);border-radius:0 0 10px 10px;padding:16px}
+.prof b{font-size:.95rem;display:block;margin-bottom:6px}
+.prof .pv{font-family:"IBM Plex Mono",monospace;font-size:.72rem;color:var(--cool);margin-bottom:8px}
+.prof span{font-size:.85rem;color:var(--ink-dim)}
+
+/* filled screenshot (real image replacing a .shot placeholder) */
+.shotimg{border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#0d1626}
+.shotimg img{width:100%;height:auto;display:block}
