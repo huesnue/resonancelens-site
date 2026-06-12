@@ -171,6 +171,34 @@ footer{border-top:1px solid var(--line);padding:40px 0;color:var(--ink-faint);fo
 
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 :focus-visible{outline:2px solid var(--cool);outline-offset:3px;border-radius:4px}
+/* ---------- highlights ---------- */
+.highlights{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:36px}
+.hl{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+.hl .img{background:#fbfcfd;border-bottom:1px solid var(--line);padding:18px 14px;display:flex;align-items:center;justify-content:center;min-height:120px}
+.hl .img img{width:100%;height:auto;border-radius:6px;display:block}
+.hl .img.dark{background:#0d1626}
+.hl .stack{display:flex;flex-direction:column;gap:10px;width:100%}
+.hl .stack img{margin:0;box-shadow:0 1px 4px rgba(0,0,0,.15)}
+.hl .ph{aspect-ratio:16/9;width:100%;border:1px dashed var(--cool-deep);border-radius:6px;background:repeating-linear-gradient(45deg,rgba(63,155,214,.05),rgba(63,155,214,.05) 10px,transparent 10px,transparent 20px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:var(--ink-faint);text-align:center;padding:14px;font-family:"IBM Plex Mono",monospace;font-size:.72rem;line-height:1.5}
+.hl .body{padding:18px 20px}
+.hl .body .k{font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--core);margin-bottom:8px}
+.hl .body h3{font-size:1.02rem;font-weight:600;margin-bottom:8px;font-family:"Inter",sans-serif}
+.hl .body p{font-size:.9rem;color:var(--ink-dim);line-height:1.55}
+
+/* ---------- DORA pillars ---------- */
+.pillars{display:flex;flex-direction:column;gap:10px;margin-top:32px}
+.pillar{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;background:var(--bg-soft);border:1px solid var(--line);border-radius:10px;padding:16px 20px}
+.pillar .pn{font-family:"IBM Plex Mono",monospace;font-size:.95rem;color:var(--ink-faint);min-width:24px}
+.pillar .pname{min-width:0}
+.pillar .pname b{font-size:.96rem;display:block;margin-bottom:3px}
+.pillar .pname span{font-size:.86rem;color:var(--ink-dim)}
+.pillar .fit{font-family:"IBM Plex Mono",monospace;font-size:.74rem;padding:5px 11px;border-radius:20px;white-space:nowrap;text-align:center}
+.fit-vh{background:rgba(76,174,125,.16);color:#6fce9c;border:1px solid rgba(76,174,125,.35)}
+.fit-h{background:rgba(63,155,214,.16);color:#7cc0ec;border:1px solid rgba(63,155,214,.35)}
+.fit-m{background:rgba(224,169,60,.16);color:#e0c07a;border:1px solid rgba(224,169,60,.35)}
+.fit-l{background:rgba(120,135,160,.14);color:#9fb0c7;border:1px solid rgba(120,135,160,.3)}
+@media(max-width:620px){.pillar{grid-template-columns:auto 1fr;gap:10px}.pillar .fit{grid-column:2;justify-self:start;margin-top:4px}}
+.disclaimer{margin-top:24px;padding:14px 18px;border:1px solid var(--line);border-radius:10px;background:rgba(120,135,160,.06);color:var(--ink-faint);font-size:.84rem;line-height:1.55}
 </style>
 </head>
 <body>
@@ -282,6 +310,96 @@ footer{border-top:1px solid var(--line);padding:40px 0;color:var(--ink-faint);fo
       <div class="note">
         <span data-lang="en"><b>Observed, not declared.</b> A disturbance specifies only its origin, intensity and timing. How far it spreads is an emergent output of the system's structure — never an input you set by hand.</span>
         <span data-lang="de"><b>Beobachtet, nicht deklariert.</b> Eine Störung gibt nur Ursprung, Intensität und zeitlichen Verlauf an. Wie weit sie sich ausbreitet, ist ein emergentes Ergebnis der Systemstruktur — kein von Hand gesetzter Eingabeparameter.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section>
+    <div class="wrap">
+      <div class="sec-label"><span data-lang="en">// Highlights</span><span data-lang="de">// Highlights</span></div>
+      <h2><span data-lang="en">What the structural view makes visible</span><span data-lang="de">Was die strukturelle Sicht sichtbar macht</span></h2>
+      <p class="lede"><span data-lang="en">Three things the model surfaces that classic monitoring tends to miss.</span><span data-lang="de">Drei Dinge, die das Modell sichtbar macht, die klassisches Monitoring meist übersieht.</span></p>
+
+      <div class="highlights">
+        <!-- Highlight 1: early warning before the break -->
+        <div class="hl">
+          <div class="img stack">
+            <img src="assets/highlight-resilient.png" alt="Resilient path — System Health 77%, Early Warning Low" />
+            <img src="assets/highlight-fragile.png" alt="Fragile path — System Health 49%, Early Warning High" />
+          </div>
+          <div class="body">
+            <div class="k"><span data-lang="en">Lead time</span><span data-lang="de">Vorlaufzeit</span></div>
+            <h3><span data-lang="en">Warning before the break</span><span data-lang="de">Warnung vor dem Bruch</span></h3>
+            <p><span data-lang="en">The same system on two structural paths. The early-warning signal diverges while system health still looks intact — structural weakening becomes visible before the drop.</span><span data-lang="de">Dasselbe System auf zwei strukturellen Pfaden. Das Frühwarnsignal divergiert, während die System Health noch intakt wirkt — die strukturelle Schwächung wird vor dem Abfall sichtbar.</span></p>
+          </div>
+        </div>
+
+        <!-- Highlight 2: cross-domain -->
+        <div class="hl">
+          <div class="img dark"><img src="assets/highlight-layered.png" alt="3D layered view — Digital, Financial and Economic spaces with cross-space bridges; stress cascading downward" /></div>
+          <div class="body">
+            <div class="k"><span data-lang="en">Compound risk</span><span data-lang="de">Compound Risk</span></div>
+            <h3><span data-lang="en">Risk that crosses domains</span><span data-lang="de">Risiko, das Domänen überspringt</span></h3>
+            <p><span data-lang="en">Digital, financial and economic spaces as stacked layers. The vertical bridges between them — where a local disturbance turns systemic, cascading from calm (green) to critical (red) — are made explicit, not hidden.</span><span data-lang="de">Digitale, finanzielle und wirtschaftliche Räume als gestapelte Ebenen. Die vertikalen Brücken dazwischen — wo eine lokale Störung systemisch wird, kaskadierend von ruhig (grün) zu kritisch (rot) — werden explizit gemacht, nicht verborgen.</span></p>
+          </div>
+        </div>
+
+        <!-- Highlight 3: CTPP concentration (placeholder) -->
+        <div class="hl">
+          <div class="img dark">
+            <div class="ph">
+              <span data-lang="en">SCREENSHOT TO ADD<br>CTPP scenario · Fragile path<br>provider concentration</span><span data-lang="de">SCREENSHOT FOLGT<br>CTPP-Szenario · Pfad Fragile<br>Provider-Konzentration</span>
+            </div>
+          </div>
+          <div class="body">
+            <div class="k"><span data-lang="en">Concentration</span><span data-lang="de">Konzentration</span></div>
+            <h3><span data-lang="en">Third-party concentration as structure</span><span data-lang="de">Drittparteien-Konzentration als Struktur</span></h3>
+            <p><span data-lang="en">Concentration among critical ICT providers shown as topology — many entities depending on the same few providers — rather than as a flat list. This is DORA's concentration risk, made visible.</span><span data-lang="de">Konzentration unter kritischen IKT-Anbietern als Topologie dargestellt — viele Entities, die an denselben wenigen Anbietern hängen — statt als bloße Liste. Das ist DORAs Konzentrationsrisiko, sichtbar gemacht.</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DORA PILLARS -->
+  <section>
+    <div class="wrap">
+      <div class="sec-label"><span data-lang="en">// DORA</span><span data-lang="de">// DORA</span></div>
+      <h2><span data-lang="en">A structural layer across the DORA pillars</span><span data-lang="de">Eine strukturelle Schicht über die DORA-Säulen</span></h2>
+      <p class="lede"><span data-lang="en">ResonanceLens is a structural analysis and early-warning layer — not a compliance tool. Across four of the five DORA pillars it either supplies structure or consumes data; on third-party concentration risk it acts as the core engine. The value has one root throughout: structural knowledge of the coupled system, applied to different DORA requirements.</span><span data-lang="de">ResonanceLens ist eine strukturelle Analyse- und Frühwarnschicht — kein Compliance-Tool. Über vier der fünf DORA-Säulen liefert es entweder Struktur oder konsumiert Daten; beim Drittparteien-Konzentrationsrisiko wirkt es als Kern-Engine. Der Mehrwert hat überall dieselbe Wurzel: strukturelle Kenntnis des gekoppelten Systems, angewendet auf unterschiedliche DORA-Anforderungen.</span></p>
+
+      <div class="pillars">
+        <div class="pillar">
+          <div class="pn">4</div>
+          <div class="pname"><b><span data-lang="en">Third-Party Risk &amp; Concentration</span><span data-lang="de">Drittparteien- &amp; Konzentrationsrisiko</span></b><span data-lang="en">Core engine — concentration &amp; propagation across the provider topology.</span><span data-lang="de">Kern-Engine — Konzentration &amp; Ausbreitung über die Provider-Topologie.</span></div>
+          <div class="fit fit-vh"><span data-lang="en">Very high</span><span data-lang="de">Sehr hoch</span></div>
+        </div>
+        <div class="pillar">
+          <div class="pn">1</div>
+          <div class="pname"><b><span data-lang="en">ICT Risk Management</span><span data-lang="de">IKT-Risikomanagement</span></b><span data-lang="en">Structure producer — the framework for functions, dependencies and early warning.</span><span data-lang="de">Struktur-Producer — das Gerüst für Funktionen, Abhängigkeiten und Frühwarnung.</span></div>
+          <div class="fit fit-h"><span data-lang="en">High</span><span data-lang="de">Hoch</span></div>
+        </div>
+        <div class="pillar">
+          <div class="pn">3</div>
+          <div class="pname"><b><span data-lang="en">Resilience Testing</span><span data-lang="de">Resilienz-Tests</span></b><span data-lang="en">Produces the test paths — which disturbance propagates furthest, where to focus.</span><span data-lang="de">Producer der Test-Pfade — welche Störung am weitesten propagiert, wo zu fokussieren ist.</span></div>
+          <div class="fit fit-m"><span data-lang="en">Medium–high</span><span data-lang="de">Mittel–hoch</span></div>
+        </div>
+        <div class="pillar">
+          <div class="pn">2</div>
+          <div class="pname"><b><span data-lang="en">Incident Management &amp; Reporting</span><span data-lang="de">Incident-Management &amp; Reporting</span></b><span data-lang="en">Consumer &amp; enricher — captures incidents, derives affected function and impact.</span><span data-lang="de">Consumer &amp; Anreicherer — erfasst Incidents, leitet betroffene Funktion und Auswirkung ab.</span></div>
+          <div class="fit fit-m"><span data-lang="en">Medium–high</span><span data-lang="de">Mittel–hoch</span></div>
+        </div>
+        <div class="pillar">
+          <div class="pn">5</div>
+          <div class="pname"><b><span data-lang="en">Information &amp; Intelligence Sharing</span><span data-lang="de">Information &amp; Intelligence Sharing</span></b><span data-lang="en">Consumer — shared threat intelligence feeds into the structural early warning.</span><span data-lang="de">Consumer — geteilte Threat-Intelligence fließt in die strukturelle Frühwarnung ein.</span></div>
+          <div class="fit fit-l"><span data-lang="en">Low–medium</span><span data-lang="de">Gering–mittel</span></div>
+        </div>
+      </div>
+
+      <div class="disclaimer">
+        <span data-lang="en"><b>Analysis, not compliance.</b> ResonanceLens is an experimental, structural approach — not a forecasting or compliance tool. It supports and informs DORA requirements; the regulatory assessment and submission remain with the entity. It does not replace established risk, security or compliance frameworks.</span>
+        <span data-lang="de"><b>Analyse, nicht Compliance.</b> ResonanceLens ist ein experimenteller, struktureller Ansatz — kein Prognose- oder Compliance-Tool. Es unterstützt und informiert DORA-Anforderungen; die regulatorische Bewertung und Einreichung bleiben beim Unternehmen. Es ersetzt keine etablierten Risiko-, Security- oder Compliance-Frameworks.</span>
       </div>
     </div>
   </section>
